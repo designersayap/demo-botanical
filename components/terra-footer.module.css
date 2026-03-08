@@ -1,0 +1,80 @@
+.footer {
+    width: 100%;
+    padding: var(--padding-2xl) 0;
+    color: var(--content-neutral--body-default);
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-md);
+}
+
+.logoWrapper {
+    width: 100%;
+    max-width: 280px;
+    height: 80px;
+    position: relative;
+    margin-bottom: var(--gap-sm);
+}
+
+.copyright {
+    color: var(--content-neutral--body-default);
+    margin-bottom: var(--gap-lg);
+}
+
+.socialWrapper {
+    display: flex;
+    gap: var(--gap-lg);
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 16px;
+    height: 16px;
+}
+
+.socialIcon {
+    color: var(--content-neutral--body-default);
+    transition: color 0.2s ease;
+}
+
+.socialIcon:hover {
+    color: var(--content-neutral--title-default);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+    padding: var(--padding-md);
+}
+
+.linkList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+.linkWrapper {
+    width: 100%;
+}
+
+.linkFooter {
+    color: var(--content-neutral--body-default);
+    text-decoration: none;
+    transition: color 0.2s;
+    gap: var(--gap-sm);
+}
+
+.linkFooter:hover {
+    color: var(--content-neutral--body-default);
+}

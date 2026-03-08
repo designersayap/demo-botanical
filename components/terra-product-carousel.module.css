@@ -1,0 +1,211 @@
+.container {
+    padding-top: var(--space-120);
+    padding-bottom: var(--space-120);
+    width: 100%;
+}
+
+/* Tabs */
+.tabsContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-120);
+    width: 100%;
+}
+
+.scrollableTabs {
+    overflow-x: auto;
+    max-width: 100%;
+    scrollbar-width: none;
+    display: flex;
+    justify-content: center;
+}
+
+.scrollableTabs::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* Carousel Inner */
+.carouselContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.cardsWrapper {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+.cardsWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.categoryGroup {
+    display: contents;
+}
+
+.centered {
+    justify-content: center;
+}
+
+.itemWrapper {
+    width: 340px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: var(--padding-md);
+}
+
+@container (max-width: 1023px) {
+    .itemWrapper {
+        width: 300px;
+    }
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--base-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow--md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-100);
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow--md);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productImage {
+    width: 100%;
+    height: 100%;
+}
+
+/* Action Button */
+.actionButtonWrapper {
+    position: absolute;
+    top: var(--space-60);
+    right: var(--space-60);
+    z-index: 2;
+}
+
+.actionButton {
+    width: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    border-radius: var(--border-radius-round) !important;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.3;
+    position: relative !important;
+}
+
+/* Force UAT Next.js inner link divs to strictly center within the button */
+.actionButton>div {
+    position: absolute !important;
+    inset: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Just to ensure nothing collapses the raw icon */
+.actionButton>div>span {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    color: inherit !important;
+}
+
+/* Force Next.js SVG rendering to inherit the white button text color */
+.actionButton svg {
+    color: var(--content-neutral--button--neutral) !important;
+    stroke: currentColor !important;
+}
+
+.actionButton:hover {
+    opacity: 0.6;
+    transform: scale(1.05);
+}
+
+/* Text Content */
+.textContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-60);
+    text-align: left;
+    padding: 0 var(--space-100) var(--space-100) var(--space-100);
+}
+
+.productName {
+    color: var(--content-neutral--title);
+}
+
+.productDescription {
+    color: var(--content-neutral--caption);
+}
+
+/* Navigation Arrow Buttons */
+.navButtonWrapper {
+    display: none;
+    /* Hide on mobile by default */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.navLeft {
+    left: -20px;
+}
+
+.navRight {
+    right: -20px;
+}
+
+.fullWidthContainer .navLeft {
+    left: 20px;
+}
+
+.fullWidthContainer .navRight {
+    right: 20px;
+}
+
+
+/* Responsiveness */
+@media (min-width: 1024px) {
+    .navButtonWrapper {
+        display: inline-flex;
+    }
+}
+
+@container (min-width: 1024px) {
+    .itemWrapper {
+        min-width: 340px;
+    }
+}

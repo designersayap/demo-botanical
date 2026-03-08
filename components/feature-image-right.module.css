@@ -1,0 +1,43 @@
+.container {
+    padding: var(--padding-2xl) 0;
+}
+
+.imageWrapper {
+    order: 2;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: var(--padding-md);
+    order: 1;
+}
+
+.title {
+    color: var(--content-neutral--title);
+    margin: 0 0 var(--gap-lg) 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.description {
+    color: var(--content-neutral--caption);
+    margin: 0 0 var(--gap-sm) 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+
+/* Mobile & Tablet: Text above image */
+/* Mobile & Tablet: Text above image */
+@container (max-width: 767px) {
+    .imageWrapper {
+        order: 2;
+    }
+
+    .content {
+        order: 1;
+    }
+}

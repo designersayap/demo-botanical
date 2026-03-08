@@ -1,0 +1,18 @@
+.container {
+    padding: var(--padding-2xl) 0;
+}
+
+.formWrapper {
+    background-color: var(--background-neutral--default);
+    padding: var(--padding-lg);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--stroke-neutral--neutral);
+    box-shadow: var(--shadow--md);
+    width: 100%;
+}
+
+@container (min-width: 768px) {
+    .formWrapper {
+        padding: var(--padding-lg);
+    }
+}
